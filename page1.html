@@ -46,6 +46,7 @@
             cursor: pointer;
             margin-top: 10px;
             display: inline-block;
+            margin-left: 83px;
         }
         .profile-container {
             display: flex;
@@ -55,7 +56,7 @@
             padding-top: 20px;
         }
         .profile-info {
-            margin-left: 25px; /* Adjusted margin to create space */
+            margin-left: 25px;
         }
         .profile-stats {
             display: flex;
@@ -64,6 +65,13 @@
         }
         .profile-stats div {
             margin-right: 20px;
+        }
+        /* New styles for aligning citations and reads horizontally */
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            width: 800px; /* Adjust width as needed */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -75,21 +83,25 @@
     <p><b>Article</b> <em>in</em> The Age of Human Rights Journal · December 2016</p>
     <p>DOI: 10.17561/tahrj.n7.6</p>
     
-    <div>
-        CITATIONS <br><strong>14</strong>
-    </div>
-    <div>
-        READS <br><strong>1,386</strong>
+    <!-- Updated stats layout -->
+    <div class="stats-container">
+        <div>
+            CITATIONS <br><strong>14</strong>
+        </div>
+        <div>
+            READS <br><strong>1,386</strong>
+        </div>
     </div>
 
     <div class="profile-container">
         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author profile picture">
         <div class="profile-info">
             <strong>Karolina Nikielska-Sekula</strong>
+            <br> 
             University of South-Eastern Norway<br>
             <div class="profile-stats">
-                <div>PUBLICATIONS <strong>15</strong></div>
-                <div>CITATIONS <strong>15</strong></div>
+                <div><b>15</b> PUBLICATIONS </div>
+                <div><b>92</b> CITATIONS</div>
             </div>
         </div>
     </div>
