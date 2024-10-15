@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e08e7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #00aaff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            color: rgb(10, 28, 185); /* Blue color for the heading */
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: rgb(10, 28, 185);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: rgba(10, 28, 185, 0.8);
+        }
+
+        footer {
+            background-color: #1e08e7;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pusha Distributors</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Register Your Account</h2>
+        <form action="register.html" method="POST">
+            <label for="accountType">Choose your account type:</label>
+            <div class="radio-group">
+                <label for="personal">
+                    <input type="radio" id="personal" name="accountType" value="personal" required>
+                    Personal Account
+                </label>
+                <label for="business">
+                    <input type="radio" id="business" name="accountType" value="business" required>
+                    Business Account
+                </label>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pusha Distributors. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

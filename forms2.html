@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search - Create Your Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .header {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        input[type="file"] {
+            border: none;
+        }
+
+        .btn-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="reset"] {
+            background-color: #555;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #333;
+        }
+
+        .section-header {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .required {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JobSearch.com</h1>
+        </div>
+        <h2>Create Your Account</h2>
+        <p class="required">* Required information</p>
+
+        <div class="form-section">
+            <div class="section-header">Basic Information</div>
+            <form action="/submit" method="POST">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="retype-password">Retype Password <span class="required">*</span></label>
+                <input type="password" id="retype-password" name="retype-password" required>
+
+                <label for="firstname">First Name <span class="required">*</span></label>
+                <input type="text" id="firstname" name="firstname" required>
+
+                <label for="lastname">Last Name <span class="required">*</span></label>
+                <input type="text" id="lastname" name="lastname" required>
+
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" placeholder="999-999-9999" required>
+
+                <label for="address">Address <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="province">Province <span class="required">*</span></label>
+                <select id="province" name="province" required>
+                    <option value="Alberta">Alberta</option>
+                    <option value="Ontario">Ontario</option>
+                    <!-- Add more provinces as needed -->
+                </select>
+
+                <label for="country">Country <span class="required">*</span></label>
+                <input type="text" id="country" name="country" required>
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">Education</div>
+                <label for="school">School</label>
+                <input type="text" id="school" name="school">
+
+                <label for="program">Program</label>
+                <input type="text" id="program" name="program">
+
+                <label for="education-level">Education Level <span class="required">*</span></label>
+                <select id="education-level" name="education-level" required>
+                    <option value="">Select</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                </select>
+
+                <label>Education Status</label>
+                <input type="radio" id="graduated" name="education-status" value="Graduated">
+                <label for="graduated">Graduated</label>
+                <input type="radio" id="current-enrolled" name="education-status" value="Current Enrolled">
+                <label for="current-enrolled">Current Enrolled</label>
+                <input type="radio" id="did-not-graduate" name="education-status" value="Did Not Graduate">
+                <label for="did-not-graduate">Did Not Graduate</label>
+
+                <label for="graduation-date">Graduation Date</label>
+                <input type="date" id="graduation-date" name="graduation-date">
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">Work Experience</div>
+                <label for="employer">Employer</label>
+                <input type="text" id="employer" name="employer">
+
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" name="job-title">
+
+                <label for="job-duty">Job Duty</label>
+                <textarea id="job-duty" name="job-duty"></textarea>
+
+                <label for="worked-year">Worked Year</label>
+                <input type="text" id="worked-year" name="worked-year">
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">Attachments</div>
+                <label for="attachments">Attachments</label>
+                <input type="file" id="attachments" name="attachments">
+        </div>
+
+        <div class="btn-group">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Apply">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
+
