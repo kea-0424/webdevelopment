@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .btn-group input[type="reset"],
+        .btn-group input[type="submit"] {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-group input[type="reset"]:hover,
+        .btn-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-group input[type="reset"] {
+            background-color: #6c757d;
+        }
+
+        .btn-group input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="dummy3.html" method="POST"> 
+        <div class="form-section">
+            <div class="section-header">Work Experience</div>
+
+            <label for="employer">Employer</label>
+            <input type="text" id="employer" name="employer" required>
+
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" name="job-title" required>
+
+            <label for="job-duty">Job Duty</label>
+            <textarea id="job-duty" name="job-duty" required></textarea>
+
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" name="end-date">
+
+            <label for="employment-type">Employment Type</label>
+            <select id="employment-type" name="employment-type" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
+            </select>
+
+            <label for="company-location">Company Location</label>
+            <input type="text" id="company-location" name="company-location" required>
+
+            <label for="reason-leaving">Reason for Leaving</label>
+            <textarea id="reason-leaving" name="reason-leaving"></textarea>
+        </div>
+
+        <div class="btn-group">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Apply">
+        </div>
+    </form>
+
+</body>
+</html>

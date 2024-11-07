@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            background-color: #fa0a0a;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        /* Button styles */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn-group input[type="submit"],
+        .btn-group input[type="button"] {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-group input[type="submit"]:hover,
+        .btn-group input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-section">
+        <form action="workexp.html" method="POST">  
+            <div class="section-header">Education</div>
+
+            <label for="school">School</label>
+            <input type="text" id="school" name="school" required>
+
+            <label for="program">Program</label>
+            <input type="text" id="program" name="program" required>
+
+            <label for="education-level">Education Level <span class="required"></span></label>
+            <select id="education-level" name="education-level" required>
+                <option value="">Select</option>
+                <option value="Graduate">Graduate</option>
+                <option value="currently studying">Currently Studying</option>
+                <option value="Undergraduate">Undergraduate</option>
+            </select>
+
+            <label>Education Status</label>
+            <div>
+                <input type="radio" id="graduated" name="education-status" value="Graduated" required>
+                <label for="graduated">Graduated</label>
+            </div>
+            <div>
+                <input type="radio" id="current-enrolled" name="education-status" value="Current Enrolled" required>
+                <label for="current-enrolled">Current Enrolled</label>
+            </div>
+            <div>
+                <input type="radio" id="did-not-graduate" name="education-status" value="Did Not Graduate" required>
+                <label for="did-not-graduate">Did Not Graduate</label>
+            </div>
+
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="graduation-date">Graduation Date</label>
+            <input type="date" id="graduation-date" name="graduation-date">
+
+            <label for="AM">Average Marks</label>
+            <input type="text" id="AM" name="AM" placeholder="e.g., 39.5">
+
+            <label for="extracurriculars">Extracurricular Activities</label>
+            <input type="text" id="extracurriculars" name="extracurriculars" placeholder="e.g., Sports, Clubs, Volunteering">
+
+            <div class="btn-group">
+                <input type="button" value="Back" onclick="history.back()">
+                <input type="submit" value="Next">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

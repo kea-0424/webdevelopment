@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Layout Container */
+        .container {
+            display: inline-grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "section aside"
+                "article aside"
+                "footer footer";
+
+            grid-template-rows: auto;
+            gap: 10px;
+            padding-left: 50px;
+          
+        }
+
+        /* Styling Sections */
+        header {
+            grid-area: header;
+            background-color: #8fd3f4;
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #f8b26a;
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+        }
+
+        section {
+            grid-area: section;
+            background-color: #c0e985;
+            padding: 20px;
+            width: 200px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #f9f48f;
+            padding: 50px;
+            width: 198x;
+            height: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+       
+
+        article {
+            grid-area: article;
+            background-color: #dca2c9;
+            padding: 20px;
+            width: 200px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #f49556;
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header><h2>Header</h2></header>
+    <nav><h2>Nav</h2></nav>
+    <section><h2>Section</h2></section>
+    <aside><h2>Aside</h2></aside>
+    <article><h2>Article</h2></article>
+    <footer><h2>Footer</h2></footer>
+</div>
+
+</body>
+</html>
+  

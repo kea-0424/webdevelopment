@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Fields</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fc;
+            margin: 0;
+            padding: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .container {
+             max-width: 800px;
+             margin: 0 auto; 
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           
+            
+            
+        }
+        .title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section1{
+             display: flex;
+             padding: 5px;
+             gap: 20px;
+           
+        }
+        .section h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        .field input,
+        .field textarea,
+        .field select {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+           
+        }
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+            border-color: #007bff;
+            outline: none;
+           
+        }
+        .error input {
+            border-color: #f44336;
+            background-color: #ffe6e6;
+        }
+        
+        .filled input {
+            background-color: #e0e0e0;
+            
+        }
+        .disabled input,
+        .disabled select {
+            background-color: #f1f1f1;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+        .readonly input {
+            background-color: #fafafa;
+            color: #555;
+        }
+        .icon, .suffix, .prefix {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #searchcontainer {
+            position: relative;
+        }
+        #search {
+            text-align: center;
+            
+        }
+        
+       #searchcontainer #searchicon {
+          position: absolute;
+          margin-top: 9px;
+          margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4 class="title">Form Fields</h4>
+
+        <div class="label">
+            <h3>Arrangements</h3>
+            <div class="section1">
+                
+                <div class="field">
+                    
+                    <label>Label</label>
+                    <input type="text" placeholder="Eg Placeholder" >
+                </div>
+            
+               
+                <div class="field">
+                    <label>Label</label>
+                    <textarea rows="2">Text</textarea>
+                </div>
+              
+                    <div class="field">
+                        <label>Label</label>
+                        <select>
+                            <option>Eg Placeholder</option>
+                        </select>
+                    </div>
+                
+                
+            </div>
+    
+        </div>
+        <div class="section1">
+            <div class="section">
+                <h3>Field Overrides</h3>
+                <div class="field">
+                    <input type="text" placeholder="Default">
+                </div>
+                <div class="field active">
+                    <input type="text" placeholder="Active/Focused">
+                </div>
+                <div class="field error">
+                    <input type="text" placeholder="Error">
+                </div>
+                <div class="field filled">
+                    <input type="text" placeholder="Filled">
+                </div>
+                <div class="field disabled">
+                    <input type="text" placeholder="Disabled" disabled>
+                </div>
+                <div class="field readonly">
+                    <input type="text" placeholder="Read Only" readonly>
+                </div>
+                <div class="field">
+                    <div class="prefix">€</div>
+                    <input type="text" placeholder="With Prefix">
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="With Suffix">
+                    <span class="suffix">Show</span>
+                </div>
+                <div id="searchcontainer" class="field">
+                    <span class="icon" id="searchicon">🔍</span>
+                    <input id="search" type="text" placeholder="With Icon">
+                   
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>Area Overrides</h3>
+                <div class="field">
+                    <input type="text" placeholder="Default">
+                </div>
+                <div class="field active">
+                    <input type="text" placeholder="Active/Focused">
+                </div>
+                <div class="field error">
+                    <input type="text" placeholder="Error">
+                </div>
+                <div class="field filled">
+                    <input type="text" placeholder="Filled">
+                </div>
+                <div class="field disabled" width 15px height 8px>
+                    <input type="text" placeholder="Disabled" disabled>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>Dropdown Overrides</h3>
+                <div class="field">
+                    <select>
+                        <option>Default</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select>
+                        <option>Dropdown Open</option>
+                        <option>Option 1</option>
+                        <option selected>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+                <div class="field filled">
+                    <select>
+                        <option>Filled</option>
+                    </select>
+                </div>
+                <div class="field disabled">
+                    <select disabled>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
